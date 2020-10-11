@@ -1,0 +1,26 @@
+{
+    "name": "mrbrownnl/chuck-norris-jokes",
+    "description": "Demo project following the package tutorial from BeyondCode",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen de Bruijn",
+            "email": "jeroen@alphega.nl"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MrBrownNL\\ChuckNorrisJokes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MrBrownNL\\ChuckNorrisJokes\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    }
+}
