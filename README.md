@@ -1,4 +1,8 @@
-# chuck-norris-jokes
+# Chuck Norris jokes
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mrbrownnl/chuck-norris-jokes.svg?style=flat-square)](https://packagist.org/packages/mrbrownnl/chuck-norris-jokes)
+[![Build Status](https://img.shields.io/travis/mrbrownnl/chuck-norris-jokes/master.svg?style=flat-square)](https://travis-ci.org/mrbrownnl/chuck-norris-jokes)
+[![Quality Score](https://img.shields.io/scrutinizer/g/mrbrownnl/chuck-norris-jokes.svg?style=flat-square)](https://scrutinizer-ci.com/g/mrbrownnl/chuck-norris-jokes)
+[![Total Downloads](https://img.shields.io/packagist/dt/mrbrownnl/chuck-norris-jokes.svg?style=flat-square)](https://packagist.org/packages/mrbrownnl/chuck-norris-jokes)
 
 Serves random Chuck Norris jokes, used for demo purposes
 
