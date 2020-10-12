@@ -3,10 +3,10 @@ language: php
 php:
   - 7.4
 
-env:
-  matrix:
-    - COMPOSER_FLAGS="--prefer-lowest"
-    - COMPSER_FLAGS=""
+#env:
+#  matrix:
+#    - COMPOSER_FLAGS="--prefer-lowest"
+#    - COMPSER_FLAGS=""
 
 before_script:
   - travis_retry composer update ${COMPOSER_FLAGS}
