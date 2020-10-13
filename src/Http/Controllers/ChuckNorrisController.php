@@ -11,4 +11,3 @@ class ChuckNorrisController
         return ChuckNorris::getRandomJoke();
     }
 }
-
