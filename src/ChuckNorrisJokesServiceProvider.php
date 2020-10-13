@@ -4,7 +4,6 @@ namespace MrBrownNL\ChuckNorrisJokes;
 
 use Illuminate\Support\ServiceProvider;
 use MrBrownNL\ChuckNorrisJokes\Console\ChuckNorrisJoke;
-use MrBrownNL\ChuckNorrisJokes\Facades\ChuckNorris;
 
 class ChuckNorrisJokesServiceProvider extends ServiceProvider
 {
@@ -12,7 +11,7 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                ChuckNorrisJoke::class
+                ChuckNorrisJoke::class,
             ]);
         }
     }
