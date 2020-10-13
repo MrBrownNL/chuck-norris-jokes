@@ -2,8 +2,10 @@
 
 namespace MrBrownNL\ChuckNorrisJokes;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use MrBrownNL\ChuckNorrisJokes\Console\ChuckNorrisJoke;
+use MrBrownNL\ChuckNorrisJokes\Http\Controllers\ChuckNorrisController;
 
 class ChuckNorrisJokesServiceProvider extends ServiceProvider
 {
@@ -14,6 +16,8 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
                 ChuckNorrisJoke::class,
             ]);
         }
+
+        Route::get('chuck-norris', ChuckNorrisController::Class);
     }
 
     public function register()
