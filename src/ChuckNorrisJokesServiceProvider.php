@@ -17,7 +17,7 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
             ]);
         }
 
-        Route::get('chuck-norris', ChuckNorrisController::Class);
+        Route::get('chuck-norris', ChuckNorrisController::class);
     }
 
     public function register()
