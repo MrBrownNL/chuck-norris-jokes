@@ -6,7 +6,6 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use MrBrownNL\ChuckNorrisJokes\Facades\ChuckNorris;
 use MrBrownNL\ChuckNorrisJokes\JokeFactory;
 use PHPUnit\Framework\TestCase;
 
