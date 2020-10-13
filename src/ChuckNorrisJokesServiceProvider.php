@@ -18,6 +18,7 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
 
     public function register()
     {
+        // Binds the name given in the facade
         $this->app->bind('chuck-norris', function () {
             return new JokeFactory();
         });
