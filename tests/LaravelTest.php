@@ -27,7 +27,7 @@ class LaravelTest extends TestCase
 
     protected function getEnvironmentSetup($app)
     {
-        include_once __DIR__ . '/../database/migrations/create_jokes_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_jokes_table.php.stub';
 
         (new \CreateJokesTable)->up();
     }
