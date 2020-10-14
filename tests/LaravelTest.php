@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use MrBrownNL\ChuckNorrisJokes\ChuckNorrisJokesServiceProvider;
 use MrBrownNL\ChuckNorrisJokes\Console\ChuckNorrisJoke;
 use MrBrownNL\ChuckNorrisJokes\Facades\ChuckNorris;
+use MrBrownNL\ChuckNorrisJokes\Models\Joke;
 use Orchestra\Testbench\TestCase;
 
 class LaravelTest extends TestCase
@@ -22,6 +23,13 @@ class LaravelTest extends TestCase
         return [
             'ChuckNorris' => ChuckNorrisJoke::class,
         ];
+    }
+
+    protected function getEnvironmentSetup($app)
+    {
+        include_once __DIR__ . '/../database/migrations/create_jokes_table.php.stub';
+
+        (new \CreateJokesTable)->up();
     }
 
     /** @test */
@@ -48,6 +56,20 @@ class LaravelTest extends TestCase
             ->andReturn('some joke');
 
         $this->get('/chuck-norris')
+            ->assertViewIs('chuck-norris::joke')
+            ->assertViewHas('joke', 'some joke')
             ->assertStatus(200);
+    }
+
+    /** @test */
+    public function it_can_access_the_database()
+    {
+        $joke = new Joke();
+        $joke->joke = 'This is funny';
+        $joke->save();
+
+        $newJoke = Joke::find($joke->id);
+
+        $this->assertSame($newJoke->joke, 'This is funny');
     }
 }
