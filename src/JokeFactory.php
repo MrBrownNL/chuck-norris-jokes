@@ -20,6 +20,6 @@ class JokeFactory
 
         $joke = json_decode($response->getBody()->getContents());
 
-        return $joke->value->joke;
+        return htmlspecialchars_decode($joke->value->joke);
     }
 }
