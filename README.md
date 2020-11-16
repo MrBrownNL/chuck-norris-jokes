@@ -23,7 +23,7 @@ $jokes = new JokeFactory();
 
 $joke = $jokes->getRandomJoke();
 ```
-or use the facade:
+or use the Laravel facade:
 ```php
 ChuckNorris::getRandomJoke()
 ```
